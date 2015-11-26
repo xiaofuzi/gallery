@@ -6,7 +6,7 @@
 
 ## 如何使用
 
-1. HTML结构
+1 .HTML结构
 
 ```html
 <div class="page-wrapp">
@@ -59,7 +59,7 @@
 这样就添加了一张图片元素
 
 
-2. 自定义样式，在main.css之后引入
+2 .自定义样式，在main.css之后引入
 
 * 给page-wrapp设宽高
 
@@ -117,5 +117,6 @@ var mySlider = {
 }
 /*初始化时作为参数传入*/
 $(function(){
-	Silder.init();
-})```
+	Silder.init(mySlider);
+})
+```
