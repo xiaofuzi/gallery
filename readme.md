@@ -3,6 +3,7 @@
 轮播效果实现，依赖于jQuery,默认样式为全屏轮播，如有需要可自定义样式。
 
 在线示例：http://yangxiaofu.com/compents/galler/index.html
+
 ## 如何使用
 
 1. HTML结构
@@ -16,6 +17,35 @@
 		<div class="sub-item"></div>
 		<div class="sub-item"></div>
 	</div>
+</div>
+
+轮播导航按钮，data-index与图片对应
+<ul id="silderNav">
+    <li class="silder-index active" data-index='1'>1</li>
+    <li class="silder-index" data-index='2'>2</li>
+    <li class="silder-index" data-index='3'>3</li>
+    <li class="silder-index" data-index='4'>4</li>
+    <li class="silder-index" data-index='5'>5</li>
+</ul>
+```
+
+带索引的HTML结构
+
+```html
+<div class="sub-item" data-index='1'>
+    <img data-src="./img/background01.jpg" alt="" class="img-item">
+</div>
+<div class="sub-item" data-index='2'>
+    <img data-src="./img/cat-cartoon.jpg" alt="" class="img-item">
+</div>
+<div class="sub-item" data-index='3'>
+    <img data-src="./img/cup.jpg" alt="" class="img-item">
+</div>
+<div class="sub-item" data-index='4'>
+    <img data-src="./img/leaf.jpg" alt="" class="img-item">
+</div>
+<div class="sub-item" data-index='5'>
+    <img data-src="./img/nature01.jpg" alt="" class="img-item">
 </div>
 ```
 
@@ -58,3 +88,34 @@
 <script src="./js/slider.js"></script>
 ```
 
+## 自定义class,id
+
+```javascript
+/*依次为左按钮、右按钮、轮播容器id以及每一个轮播元素class、轮播导航class*/
+Slider = {
+	leftBtn: '#leftBtn',	
+	rightBtn: '#rightBtn',
+	itemWrap: '#itemWrap',
+	subItem: '#itemWrap .sub-item',
+	silderIndexs: '.silder-index'
+}
+```
+
+如果自定义id/class可传人一个如上的对象
+
+```javascript
+/*将第二层的容器改为 id="galleryWrap",
+子元素改为 class="img-item",
+以及按钮id更改。
+注：只能改名，不能将id更改为class或是反过来*/
+var mySlider = {
+	leftBtn: '#leftButton',	
+	rightBtn: '#rightButton',
+	itemWrap: '#galleryWrap',
+	subItem: '#galleryWrap .img-item',
+	silderIndexs: '.silder-index'
+}
+/*初始化时作为参数传入*/
+$(function(){
+	Silder.init();
+})```
