@@ -2,6 +2,7 @@
 
 轮播效果实现，依赖于jQuery,默认样式为全屏轮播，如有需要可自定义样式。
 
+在线示例：http://yangxiaofu.com/compents/galler/index.html
 ## 如何使用
 
 1. HTML结构
